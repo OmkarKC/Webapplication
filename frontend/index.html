@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library Management System</title>
+</head>
+<body>
+<script>
+  window.location.href = localStorage.getItem("lms_session") && localStorage.getItem("lms_token") ? "book-list.html" : "login.html";
+</script>
+</body>
+</html>

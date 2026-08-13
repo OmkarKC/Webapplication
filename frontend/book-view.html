@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>View Book | Library Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sidebar-brand">Online Library</div>
+  <nav class="sidebar-links">
+    <a href="book-list.html" class="active">Books</a>
+    <a href="author-list.html">Authors</a>
+    <a href="genre-list.html">Genres</a>
+  </nav>
+  <div class="sidebar-footer">
+    <span id="sessionInfo"></span>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+  </div>
+</aside>
+
+<main class="main-content">
+<div class="container">
+  <a href="book-list.html" class="back-link">← Back to Book List</a>
+  <div id="bookDetail" class="detail-card"></div>
+</div>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/book-view.js"></script>
+</body>
+</html>

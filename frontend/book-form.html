@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add/Edit Book | Library Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="sidebar-brand">Online Library</div>
+  <nav class="sidebar-links">
+    <a href="book-list.html" class="active">Books</a>
+    <a href="author-list.html">Authors</a>
+    <a href="genre-list.html">Genres</a>
+  </nav>
+  <div class="sidebar-footer">
+    <span id="sessionInfo"></span>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+  </div>
+</aside>
+
+<main class="main-content">
+<div class="container narrow">
+  <a href="book-list.html" class="back-link">← Back to Book List</a>
+  <div class="form-card">
+    <h1 id="formTitle">Add New Book</h1>
+    <div class="error-box" id="errorBox" style="display:none;"></div>
+
+    <form id="bookForm">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="author">Author</label>
+      <select id="author" name="author" required>
+        <option value="">Select an author</option>
+      </select>
+
+      <label for="genre">Genre</label>
+      <select id="genre" name="genre" required>
+        <option value="">Select a genre</option>
+      </select>
+
+      <label for="stock">Stock Quantity</label>
+      <input type="number" id="stock" name="stock" min="0" required>
+
+      <label for="cover">Cover Image</label>
+      <input type="file" id="cover" name="cover" accept="image/*">
+      <img id="coverPreview" class="cover-preview" style="display:none;">
+
+      <div class="form-actions">
+        <button type="submit" class="primary-btn">Save Book</button>
+        <a href="book-list.html" class="cancel-btn">Cancel</a>
+      </div>
+    </form>
+  </div>
+</div>
+</main>
+
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/book-form.js"></script>
+</body>
+</html>

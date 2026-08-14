@@ -1,7 +1,10 @@
 // storage.js — Frontend API layer. All library data is stored in the backend
 // database; the browser only keeps the JWT session token.
 
-const API_BASE_URL = "http://localhost:3000/api";
+const API_BASE_URL =
+  window.location.hostname === "localhost"
+    ? "http://localhost:3000/api"
+    : "https://webapplication-backend.onrender.com/api";
 const DB_KEYS = { SESSION: "lms_session" };
 
 function getToken() {

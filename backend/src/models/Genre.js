@@ -1,0 +1,7 @@
+import { DataTypes } from "sequelize";
+import { sequelize } from "../configs/database.js";
+
+export const Genre = sequelize.define("Genre", {
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  name: { type: DataTypes.STRING(50), allowNull: false, unique: true }
+}, { tableName: "genres", timestamps: true });

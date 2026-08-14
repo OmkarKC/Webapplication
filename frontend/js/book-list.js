@@ -48,7 +48,7 @@ async function renderBooks() {
         <td>${book.title}</td>
         <td>${author ? author.name : "Unknown"}</td>
         <td><span class="genre-tag">${genre ? genre.name : "Unknown"}</span></td>
-        <td><span class="stock-badge ${isLowStock ? 'low' : ''}">${book.stock} ${isLowStock ? "⚠️" : ""}</span></td>
+        <td><span class="stock-badge ${isLowStock ? 'low' : ''}">${book.stock} ${isLowStock ? "!" : ""}</span></td>
         <td class="actions">
           <a href="book-view.html?id=${book.id}" class="text-action">View</a>
           <a href="book-form.html?id=${book.id}" class="text-action">Edit</a>
